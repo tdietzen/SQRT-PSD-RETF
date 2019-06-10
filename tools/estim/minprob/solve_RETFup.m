@@ -31,7 +31,7 @@ up = zeros(N,1);
 for n = 1:N
     if xi(n) > xiThresh
         up(n) = 1;
-        H_hat_post(2:M,n) = (sqrtPsi_xe(2:M,:)*Omega_hat(:,n)*sqrtphi_s_hat(n) + beta*H_hat_prior(2:M,n))/(phi_s_hat(n) + beta);
+        H_hat_post(2:M,n) = (sqrtPsi_xe(2:M,:)*Omega_hat(:,n)*conj(sqrtphi_s_hat(n)) + beta*H_hat_prior(2:M,n))/(phi_s_hat(n) + beta);
     else
         up(n) = 0;
         H_hat_post(2:M,n) = H_hat_prior(2:M,n);
