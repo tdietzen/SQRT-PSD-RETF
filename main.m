@@ -13,10 +13,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Example of early PSD estimation as described in [1]. The code contained
-% in main.m loads microphone signals and estimates erly PSDs, based on both
-% the conventional and the square-root MP. If the square-root MP is used,
-% RETF updates are performed. The performance is measred in terms of SIR,
-% SAR, and SDR.
+% in main.m loads microphone signals and estimates early PSDs, based on
+% both the conventional and the square-root MP. If the square-root MP is
+% used, RETF updates are performed. The performance is measured in terms of
+% SIR, SAR, and SDR.
 
 
 %% PREAMBLE SETTINGS
