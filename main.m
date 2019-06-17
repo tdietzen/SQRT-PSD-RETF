@@ -117,7 +117,7 @@ s1_STFT = calc_STFT(s1_TD, fs, win, N_STFT, R_STFT, 'onesided');
 s2_STFT = calc_STFT(s2_TD, fs, win, N_STFT, R_STFT, 'onesided');
 x_STFT  = x1_STFT + x2_STFT;
 % plot
-figure('Name','microphone signals');
+figure('Name','microphone signal components');
 subplot(3,1,1); plotSpec(x1_STFT(:,:,1),  'mag', [],        yTickProp, cRange, 0); title('x1'); ylabel('f/kHz');
 subplot(3,1,2); plotSpec(x2_STFT(:,:,1),  'mag', [],        yTickProp, cRange, 0); title('x2'); ylabel('f/kHz');
 subplot(3,1,3); plotSpec(x_STFT(:,:,1),   'mag', xTickProp, yTickProp, cRange, 0); title('x');  ylabel('f/kHz'); xlabel('time/s');
