@@ -6,10 +6,11 @@
 %
 % If you find it useful, please cite:
 %
-% [1] T. Dietzen, S. Doclo, M. Moonen, T. van Waterschoot, "Square
-% Root-based Multi-Source Early PSD Estimation and Recursive RETF Update in
-% Reverberant Environments by means of the Orthogonal Procrustes Problem,
-% "IEEE Trans. Audio, Speech, Lang. Process. (submitted), 2019.
+% [1] T. Dietzen, S. Doclo, M. Moonen, and T. van Waterschoot, “Square
+% rootbased multi-source early PSD estimation and recursive RETF update in
+% reverberant environments by means of the orthogonal Procrustes problem,”
+% ESAT-STADIUS Tech. Rep. TR 19-69, KU Leuven, Belgium, submitted for
+% publication, June 2019.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Example of early PSD estimation as described in [1]. The code contained
