@@ -68,12 +68,10 @@ f = linspace(0,fs/2,N_STFT_half);
 
 % forgetting factor zeta
 zeta  = tau2forget(2*M*R_STFT/fs, R_STFT, fs);
-% penelty factor alpha
-alpha = 1;
 % laplace coefficients of speech per frequency bin
 tmp          = load('./source/param/lap_div.mat');
-lap_div     = tmp.lap_div;
-% alpha for square-root MP
+lap_div      = tmp.lap_div;
+% penelty factor alpha for square-root MP
 tmp          = load('./source/param/alpha_sqrtMP.mat');
 alpha_sqrtMP = tmp.alpha_sqrtMP;
 
