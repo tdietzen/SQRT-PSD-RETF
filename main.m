@@ -48,8 +48,8 @@ sourceAng = [0 60];
 % microphone signals
 x1_TD = audioread('x1.wav');
 x2_TD = audioread('x2.wav');
-x1_early_TD = audioread('x1_early.wav');
-x2_early_TD = audioread('x2_early.wav');
+s1_TD = audioread('s1.wav');
+s2_TD = audioread('s2.wav');
 y_TD = x1_TD + x2_TD;
 
 
@@ -112,11 +112,11 @@ cRange    = [-55 5];
 %% STFT PROCESSING
 
 % transform
-x1_STFT         = calc_STFT(x1_TD,          fs, win, N_STFT, R_STFT, 'onesided');
-x2_STFT         = calc_STFT(x2_TD,          fs, win, N_STFT, R_STFT, 'onesided');
-x1_early_STFT   = calc_STFT(x1_early_TD,    fs, win, N_STFT, R_STFT, 'onesided');
-x2_early_STFT   = calc_STFT(x2_early_TD,    fs, win, N_STFT, R_STFT, 'onesided');
-y_STFT          = x1_STFT + x2_STFT;
+x1_STFT = calc_STFT(x1_TD, fs, win, N_STFT, R_STFT, 'onesided');
+x2_STFT = calc_STFT(x2_TD, fs, win, N_STFT, R_STFT, 'onesided');
+s1_STFT = calc_STFT(s1_TD, fs, win, N_STFT, R_STFT, 'onesided');
+s2_STFT = calc_STFT(s2_TD, fs, win, N_STFT, R_STFT, 'onesided');
+y_STFT  = x1_STFT + x2_STFT;
 % plot
 figure('Name','microphone signals');
 subplot(3,1,1); plotSpec(x1_STFT(:,:,1),  'mag', [],        yTickProp, cRange, 0); title('x1'); ylabel('f/kHz');
@@ -153,7 +153,7 @@ e_phi_s_art         = cell(2,1);
 measures            = cell(2,1);
 
 % reference PSD
-phi_s_ref_STFT = cat(3, abs(x1_early_STFT(:,:,1)).^2, abs(x2_early_STFT(:,:,1)).^2);
+phi_s_ref_STFT = cat(3, abs(s1_STFT).^2, abs(s2_STFT).^2);
 
 for i_method = 1:2
     
