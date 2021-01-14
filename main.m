@@ -133,6 +133,21 @@ Psi_x_STFT = estim_corrmat(x_STFT, zeta);
     'lambdaMin', 0,...
     'forgetPSD', zeta);
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% NOTE: instead of desmoothing eigenvalues as in the implementation above,
+% one might prefer to use instantaneous eigenvalues, see also [a] and the
+% desmooth_GEVD() function in [b].
+%
+% [a] T. Dietzen, M. Moonen, and T. van Waterschoot, 'Instantaneous PSD
+% estimation for speech enhancement based on generalized principal
+% components,' in Proc. 28th European Signal Process. Conf. (EUSIPCO 2020),
+% Amsterdam, Netherlands, Jan 2021, pp. 1-5.
+%
+% [b] https://github.com/tdietzen/INSTANT-PSD
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %% ESTIMATE PSDs, RETFs
 
